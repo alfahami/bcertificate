@@ -23,15 +23,8 @@ public class Certificate extends State {
     @Property()
     private String state="";
 
-    @Property()
-    private int currentState = 0;
-
     public String getState() {
         return state;
-    }
-
-    public int getCurrentState() {
-        return this.currentState;
     }
 
     public Certificate setCurrentState(int currentState) {
@@ -173,7 +166,7 @@ public class Certificate extends State {
 
     @Override
     public String toString() {
-        return "Certificate::" + this.key + " Certificate Number" + this.getCertificateNumber() + " Student Name: " + getStudentName() + " Honor: " + getHonor() + " Current State: " + getCurrentState();
+        return "Certificate::" + this.key + " Certificate Number" + this.getCertificateNumber() + " Student Name: " + getStudentName() + " Honor: " + getHonor() + " Current State: " + getState();
     }
 
     /**
