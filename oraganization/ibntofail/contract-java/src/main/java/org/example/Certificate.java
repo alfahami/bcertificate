@@ -27,11 +27,6 @@ public class Certificate extends State {
         return state;
     }
 
-    public Certificate setCurrentState(int currentState) {
-        this.currentState = currentState;
-        return this;
-    }
-
     public Certificate setState(String state) {
         this.state = state;
         return this;
@@ -53,19 +48,16 @@ public class Certificate extends State {
     }
 
     public Certificate setAdded() {
-        this.setCurrentState(1);
         this.state = Certificate.ADDED;
         return this;
     }
 
     public Certificate setPending() {
-        this.setCurrentState(2);
         this.state = Certificate.PENDING;
         return this;
     }
 
     public Certificate setCertified() {
-        this.setCurrentState(2);
         this.state = Certificate.CERTIFIED;
         return this;
     }
