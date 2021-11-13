@@ -73,7 +73,7 @@ public class Certificate extends State {
     private String birthDate;
 
     @Property()
-    private String placeOfBirth;
+    private String birthPlace;
 
     @Property()
     private String nationality;
@@ -120,12 +120,12 @@ public class Certificate extends State {
         return this;
     }
 
-    public String getPlaceOfBirth() {
-        return placeOfBirth;
+    public String getBirthPlace() {
+        return birthPlace;
     }
 
-    public Certificate setPlaceOfBirth(String placeOfBirthaceOfBirth) {
-        this.placeOfBirth = placeOfBirth;
+    public Certificate setBirthPlace(String birthPlaceaceOfBirth) {
+        this.birthPlace = birthPlace;
      return this;
     }
 
@@ -172,12 +172,12 @@ public class Certificate extends State {
         String studentName = json.getString("studentName");
         String certificateNumber = json.getString("certificateNumber");
         String birthDate = json.getString("birthDate");
-        String placeOfBirth = json.getString("placeOfBirth");
+        String birthPlace = json.getString("birthPlace");
         String nationality = json.getString("nationality");
         int graduationYear = json.getInt("graduationYear");
         String honor  = json.getString("honor");
         String state = json.getString("state");        
-        return createInstance(studentName, certificateNumber, birthDate, placeOfBirth, nationality, honor, graduationYear ,state);
+        return createInstance(studentName, certificateNumber, birthDate, birthPlace, nationality, honor, graduationYear ,state);
     }
 
     public static byte[] serialize(Certificate paper) {
@@ -187,10 +187,10 @@ public class Certificate extends State {
     /**
      * Factory method to create a commercial paper object
      */
-    public static Certificate createInstance(String studentName, String certificateNumber, String birthDate, String placeOfBirth,
+    public static Certificate createInstance(String studentName, String certificateNumber, String birthDate, String birthPlace,
             String nationality, String honor, int graduationYear, String state) {
         return new Certificate().setStudentName(studentName).setCertificateNumber(certificateNumber).setBithDate(birthDate)
-                .setPlaceOfBirth(placeOfBirth).setKey().setNationality(nationality).setHonor(honor).setGraduationYear(graduationYear).setState(state);
+                .setBirthPlace(birthPlace).setKey().setNationality(nationality).setHonor(honor).setGraduationYear(graduationYear).setState(state);
     }
 
 

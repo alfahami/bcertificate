@@ -65,12 +65,12 @@ public class CertificateContract implements ContractInterface {
      */
     @Transaction
     public Certificate add(CertificateContext ctx, String studentName, String certificateNumber, String birthDate,
-            String placeOfBirth, String nationality, String honor, int graduationYear, String state) {
+            String birthPlace, String nationality, String honor, int graduationYear, String state) {
 
         System.out.println(ctx);
 
         // create an instance of the certificate
-        Certificate certificate = Certificate.createInstance(studentName, certificateNumber, birthDate, placeOfBirth,
+        Certificate certificate = Certificate.createInstance(studentName, certificateNumber, birthDate, birthPlace,
                 nationality,honor, graduationYear, "");
 
         // Smart contract, rather than certificate bean, moves the certificate into ADDED state
@@ -106,7 +106,7 @@ public class CertificateContract implements ContractInterface {
      */
     @Transaction
     public Certificate certify(CertificateContext ctx, String studentName, String certificateNumber, String birthDate,
-            String placeOfBirth, String nationality, String honor, int graduationYear, String state)  {
+            String birthPlace, String nationality, String honor, int graduationYear, String state)  {
 
         // Retrieve the current certificate using key fields provided
         String certificateKey = State.makeKey(new String[] { certificateNumber });
