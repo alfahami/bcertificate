@@ -82,7 +82,7 @@ public class Certificate extends State {
     private String honor;
 
     @Property()
-    private String yearOfObtention;
+    private int graduationYear;
 
     public String getStudentName() {
         return studentName;
@@ -147,13 +147,13 @@ public class Certificate extends State {
         return honor;
     }
 
-    public Certificate yearOfObtention(String yearOfObtention) {
-        this.yearOfObtention = yearOfObtention;
+    public Certificate setGraduationYear(int graduationYear) {
+        this.graduationYear = graduationYear;
         return this;
     }
 
-    public String getYearOfObtention() {
-        return yearOfObtention;
+    public int getGraduationYear() {
+        return graduationYear;
     }
 
     @Override
@@ -174,10 +174,10 @@ public class Certificate extends State {
         String birthDate = json.getString("birthDate");
         String placeOfBirth = json.getString("placeOfBirth");
         String nationality = json.getString("nationality");
-        String yearOfObtention = json.getString("yearOfObtention");
+        int graduationYear = json.getInt("graduationYear");
         String honor  = json.getString("honor");
         String state = json.getString("state");        
-        return createInstance(studentName, certificateNumber, birthDate, placeOfBirth, nationality, honor, yearOfObtention ,state);
+        return createInstance(studentName, certificateNumber, birthDate, placeOfBirth, nationality, honor, graduationYear ,state);
     }
 
     public static byte[] serialize(Certificate paper) {
@@ -188,9 +188,9 @@ public class Certificate extends State {
      * Factory method to create a commercial paper object
      */
     public static Certificate createInstance(String studentName, String certificateNumber, String birthDate, String placeOfBirth,
-            String nationality, String honor, String yearOfObtention, String state) {
+            String nationality, String honor, int graduationYear, String state) {
         return new Certificate().setStudentName(studentName).setCertificateNumber(certificateNumber).setBithDate(birthDate)
-                .setPlaceOfBirth(placeOfBirth).setKey().setNationality(nationality).setHonor(honor).setState(state);
+                .setPlaceOfBirth(placeOfBirth).setKey().setNationality(nationality).setHonor(honor).setGraduationYear(graduationYear).setState(state);
     }
 
 
