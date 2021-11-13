@@ -16,7 +16,7 @@ import org.hyperledger.fabric.gateway.GatewayException;
 import org.hyperledger.fabric.gateway.Network;
 import org.hyperledger.fabric.gateway.Wallet;
 import org.hyperledger.fabric.gateway.Wallets;
-import org.bcertificate.Certificate;
+import org.certificatenet.Certificate;
 
 import org.hyperledger.fabric.sdk.exception.TransactionEventException;
 import org.hyperledger.fabric.sdk.BlockEvent;
@@ -65,8 +65,8 @@ public class Add {
         Network network = gateway.getNetwork("mychannel");
 
         // Get addressability to commercial paper contract
-        System.out.println("Use org.bcertificate.certificate smart contract.");
-        Contract contract = network.getContract(contractName, "org.bcertificate.certificate");
+        System.out.println("Use org.certificatenet.certificate smart contract.");
+        Contract contract = network.getContract(contractName, "org.certificatenet.certificate");
 
         // Issue commercial paper
         System.out.println("Submit commercial certificate add transaction.");
