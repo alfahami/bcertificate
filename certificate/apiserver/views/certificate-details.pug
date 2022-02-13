@@ -1,0 +1,29 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title CERTIFICATE DETAILS | BCERTIFICATE
+
+  style 
+    include css/certificate.css
+
+.container
+  .logo
+    | Ibn Tofail University
+  .marquee
+    | Certificate of Graduation
+  .assignment
+    | This certificate is presented to
+  .person
+    | #{certificate["studentFullName"]}
+  .reason
+    | born in #{certificate["birthDate"]} at #{certificate["birthPlace"]} 
+    br
+    br
+    br
+    br
+    | For successfully completing his master in #{certificate["title"]} with honor : #{certificate["honor"]}
+   
+
+    

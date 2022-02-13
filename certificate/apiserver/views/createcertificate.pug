@@ -1,0 +1,65 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title ADD CERTIFICATE | BCERTIFICATE
+
+  style 
+    include css/addcertificate.css
+
+
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css')
+
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css')
+
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
+
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+
+
+.container.register
+  .row
+    .col-md-3.register-left
+      img(src='https://image.ibb.co/n7oTvU/logo_white.png' alt='')
+      h5 CERTIFY ALL DIPLOMAS IN ONE CLICK
+      p  Import an excel sheet list(.xls) by clicking the import button 
+      form.file-input(action="/api/preview_excel_data" method="POST", enctype="multipart/form-data")
+        .form-group
+        label(for='xls')
+        input#my_file_input.form-control-file(type='file', name="file")
+        input.btnRegister(type='submit' class="btn btn-success" value='certify all')
+      br
+      a(class="btn btn-success" href="/api/allcertificates/") all certificates
+
+
+    .col-md-9.register-right
+      #myTabContent.tab-content
+        #home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab')
+          h3.register-heading CERTIFIY A SINGLE DIPLOMA
+          form#contactForm.mb-5(method='POST' action="/api/addcertificate")
+            .row.register-form
+              .col-md-6
+                .form-group
+                  input.form-control(type='text' placeholder='Certificate Number*' name='certificateNumber')
+                .form-group
+                  input.form-control(type='text' placeholder='Full Name *' name='studentFullName')
+                .form-group
+                  input.form-control(type='text' placeholder='Apogee *' name='apogee')
+                .form-group
+                  input.form-control(type='text' placeholder='CIN *' name='cin')
+              .col-md-6
+                .form-group
+                  input.form-control(type='text' placeholder='Birth Date(dd/mm/yyyy) *' name='birthDate')
+                .form-group
+                  input.form-control(type='text' name='birthPlace' placeholder='Birth Place *')
+                .form-group
+                  input.form-control(type='text' name='title' placeholder='Title *')
+                .form-group
+                  input.form-control(type='text' name='honor' placeholder='Honor *')
+                .form-group
+                  input.form-control(type='text' name="graduationDate" placeholder='Graduation date *')
+                input.btnRegister(type='submit' class="btn btn-success" value='Certify')
+
+                
+

@@ -1,8 +1,0 @@
-<h1>{{ title }}</h1>
-<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="Add New To Do" formControlName="add" />
-    <button type="submit">Add To Do</button>
-</form>
-<ul id="todo-list" *ngFor="let todo of todos">
-    <li class="todo-item">{{ todo }}</li>
-</ul>
