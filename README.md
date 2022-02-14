@@ -54,7 +54,7 @@ Repo structure:
     * **_apiserver/_** is our nodeJS application. It contains same administration scripts in *javascript/* and more.\
     Run `npm install` before using any enrolling admin, registering the user and invoking transactions.
 
-Copy **_certificate/_** and paste to **_fabric/samples/_** 
+    Copy **_certificate/_** and paste to **_fabric/samples/_** 
 
 Now that we went through all the folder and script let's see how we to start the app step by step :
   - Make sure you are in *fabric-samples/certificate* run the following commands on your terminal:
