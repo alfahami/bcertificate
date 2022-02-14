@@ -10,7 +10,7 @@ The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and pug 
 ## Configuration and running
 **BCertificate** is built on top of Hyperledger Linux foundation, thus it's a must to install and configure Hyperledger first.
 
-#### Hyperledger installation and configuration
+### Hyperledger installation and configuration
 
 *Prerequisites*:
   - Install and configure Docker (tons of tutorial on the web, )
