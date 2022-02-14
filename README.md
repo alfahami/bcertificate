@@ -52,8 +52,7 @@ Repo structure:
     Not fully implemented and neither fully tested.\
 
     * **_apiserver/_** is our nodeJS application. It contains same administration scripts in *javascript/* and more.\
-    Run `npm install` before using any enrolling admin, registering the user and invoking transactions.
-
+    Run `npm install` before using any enrolling admin, registering the user and invoking transactions.\
     Copy **_certificate/_** and paste to **_fabric/samples/_** 
 
 Now that we went through all the folder and script let's see how we to start the app step by step :
