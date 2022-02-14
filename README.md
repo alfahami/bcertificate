@@ -88,7 +88,7 @@ Git GitHub's certificate\
 
 #### Contributions, remarks & questions
 Please contact me by email in case you've got questions, remarks, ... regarding the project.\
-Feel free to contribute by creating an issue and/or a pull request. \
+Feel free to contribute by creating an [issue](https://github.com/alfahami/bcertificate/issues/new) and/or a [pull request](https://github.com/alfahami/bcertificate/pulls). \
 The main focus was on getting familiar with Hyperledger and its different ways of building blockchain solutions. 
 
 
