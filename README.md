@@ -7,7 +7,7 @@ A blockchain network that let schools, colleges and universities add their crede
 The network is build using [Hyperledger Fabric V2.X.X](https://www.hyperledger.org/use/fabric) and the test were made on **_Linux/Debian 10 Buster_** machine. 
 The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and pug template engine as a render for the front-end.
 
-### Configuration and running
+## Configuration and running
 **BCertificate** is built on top of Hyperledger Linux foundation, thus it's a must to install and configure Hyperledger first.
 
 #### Hyperledger installation and configuration
