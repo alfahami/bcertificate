@@ -65,8 +65,7 @@ Now that we went through all the folder and script let's see how we to start the
     * `node apiserver.js` 
     * Now you can visit [http://localhost:8080/api/](http://localhost:8080/api/) or [http://localhost:8080/api/allcertificates](http://localhost:8080/api/allcertificates) to see already added certificates.
 
-
-  ### Front-end views:
+  ### Front-end views:
 
   All certificates\
   [http://localhost:8080/api/allcertificates](http://localhost:8080/api/allcertificates)
