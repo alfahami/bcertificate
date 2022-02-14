@@ -4,7 +4,7 @@
 
 A blockchain network that let schools, colleges and universities add their credentials in the blockchain which could help against fraud papers.
 
-The network is build using [Hyperledger Fabric V2.X.X](https://www.hyperledger.org/use/fabric) and the test were made on **_Linux/Debian 10 Buster_** machine. 
+The network was built using [Hyperledger Fabric V2.X.X](https://www.hyperledger.org/use/fabric) and the test were made on **_Linux/Debian 10 Buster_** machine but should work on any given OS. 
 The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and pug template engine as a render for the front-end.
 
 ## Configuration and running
