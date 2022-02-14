@@ -25,29 +25,29 @@ The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and pug 
   - Run the test-network as described in [using the test-network tutoriel](https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html) to make sure that everything is set up.
 
 ### BCertificate, installation and running
-Now how to get start our network and get our web app running?
+Now how so we start our HL network and get our web app running?
 
 First and foremost, download or clone this repo.\
 Repo structure:
   - **_test-network/add_path_org1.sh_** : 
   a script that adds *peer cli*, *peer* and *fabric config* related path with org1's environment variables.\
-  Copy this file to *fabric-samples/test-network*.
+  Copy this file (_test-network/add_path_org1.sh_) to *fabric-samples/test-network*.
 
   - **_chaincode/certificate/_**: contains our smart contract code (**_javascript/_**, **_java/_**) which will be packaged (chaincode), installed and committed to corresponding peers.\
   Copy the folder **_chaincode/certificate/_** to **_fabric-samples/chaincode_**.\
   Open terminal and run `npm install` to install packages. 
   
-  - **_certificate/_** : contains our client application and is the starting point of our application.\
-    * **_startBCertificate.sh_** is the script that going to start our network, bringing up HL docker images, creating channel, packaging, installing and deploying our chaincode.\
-    *Note* : We're deploying our chaincode by nitializing our ledger which is done by requesting and invoking a chaincode initialization function (initLedger).\
+  - **_certificate/_** : contains our client application and is the starting point of our application.
+    * **_startBCertificate.sh_** is the script that is going to start our network, bringing up HL docker images, creating channel, packaging, installing and deploying our chaincode.\
+    *Note* : We're deploying our chaincode by nitializing the ledger which consists of requesting and invoking a chaincode initialization function (initLedger).\
     Check the flag **_cci_** in `./network.sh deployCC -ccn certificate -ccv 1 -cci initLedger`\
-    If you don't want to initialize the ledger, remove `-cci initLedger`
+    If you don't want to initialize the ledger, remove `-cci initLedger` from _startBCertificate.sh_
 
-    * **_networkDown.sh_** will bring down our network, which would stop running docker container.\
-    Note: If you're restarting the netowrk, you'll probably want to manually remove the chaincode volumes as they'll create conflict. (`docker volumes prune` would remove all your docker volumes)
+    * **_networkDown.sh_** will bring down our network, thus stopping running docker containers.\
+    Note: If you're restarting the netowrk, you'll probably want to manually remove the chaincode docker volumes as they'll create conflict. (`docker volumes prune` would remove all your docker volumes)
 
-    * **_javascript/_** is where we're going to *enroll ou admin*, *registrer our user* (so he/she can run transaction in the started network by invoking the chaincode) and *querying the ledger* as we've deployed our chaincode while initializing it.\
-    Run `npm install` before using any script. 
+    * **_javascript/_** is where we're going to *enroll ou admin*, *registrer our user* (so he/she can run transactions against the network by invoking the chaincode) and *querying the ledger* to get added certificates as we've deployed our chaincode while initializing it.\
+    Run `npm install` before using any scripts. 
 
     * **_java/_** same as *javascript/*, contains our administration scripts.
     Not fully implemented and neither fully tested.\
