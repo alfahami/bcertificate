@@ -4,7 +4,7 @@
 
 A blockchain network that let schools, colleges and universities add their credentials in the blockchain which could help against fraud papers.
 
-The network is build using [Hyperledger Fabric V2.X.X](https://www.hyperledger.org/use/fabric) and the test were made on Linux/Debian 10 Buster machine. 
+The network is build using [Hyperledger Fabric V2.X.X](https://www.hyperledger.org/use/fabric) and the test were made on **_Linux/Debian 10 Buster_** machine. 
 The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and pug template engine as a render for the front-end.
 
 ### Configuration and running
@@ -56,8 +56,8 @@ Repo structure:
 
 Copy **_certificate/_** and paste to **_fabric/samples/_** 
 
-Now that we went through all the folder and script let's see how we to start the app step by step :\
-  - Make sure you are in *fabric-samples/certificate* run the following commands:
+Now that we went through all the folder and script let's see how we to start the app step by step :
+  - Make sure you are in *fabric-samples/certificate* run the following commands on your terminal:
     
     * `./startBCertificate.sh` 
     * `cd apiserver/` 
@@ -73,7 +73,7 @@ Now that we went through all the folder and script let's see how we to start the
 ![alt text](screenshots/allcertificates.png "Diplomas in the ledger")
 
 
-Adding a certificate 
+Adding a certificate\
 Note that one can add a list of certificate by importing an excel sheet (.xls).
 [http://localhost:8080/api/addcertificate](http://localhost:8080/api/addcertificate)
 
@@ -87,7 +87,7 @@ Git GitHub's certificate\
 ![alt text](screenshots/git-github.png "Certificate details")
 
 #### Contributions, remarks & questions
-Please contact me by email in case you've got questions, remarks, ... regarding the project.
+Please contact me by email in case you've got questions, remarks, ... regarding the project.\
 Feel free to contribute by creating an issue and/or a pull request. \
 The main focus was on getting familiar with Hyperledger and its different ways of building blockchain solutions. 
 
@@ -97,7 +97,7 @@ The main focus was on getting familiar with Hyperledger and its different ways o
  
  [FACULTY OF SCIENCE - KENITRA](http://fs.uit.ac.ma/ "Site officiel")
  
- MATHEMATICS & COMPUTER SCIENCE DEPT
+ MATHEMATICS & COMPUTER SCIENCE DEPARTMENT
  
  ### Licence: 
  This project is avalaible as open source under the terms of [licence MIT](https://opensource.org/licenses/MIT).
