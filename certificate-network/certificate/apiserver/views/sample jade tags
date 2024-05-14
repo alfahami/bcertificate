@@ -1,0 +1,128 @@
+html
+  head
+    meta(charset='utf-8')
+    style(type='text/css')
+      h1 {color: red;}
+    link(rel='stylesheet', type='text/css', href='styles.css')
+  script(src='')
+  script(type='text/javascript')
+  body
+    h1  Headers 
+    h2  hello 
+    h3  hello 
+    h4  hello 
+    h5  hello 
+    h6  hello 
+    abbr(title='as soon as possible') ASAP 
+    br
+    acronym(title='as soon as possible') ASAP 
+    br
+    h1  Text formatting 
+    b  Bold 
+    br
+    big
+      | Big
+      br
+      blockquote  Indent this text and style 
+      br
+      center  Center tag 
+      br
+      em  Emphasis 
+      br
+      i  Italic (same) 
+      br
+      p  I'm a big Paragraph 
+      q  I'm a quote 
+      br
+      s  I've been struck 
+      small  I feel small 
+      strong  I'm strong 
+      br
+      | Hello
+      sub  subscript 
+      br
+      br
+      | Hello
+      sup  superscript 
+      br
+      img(src='http://eofdreams.com/data_images/dreams/apple/apple-05.jpg', alt='an apple', height='480', width='640')
+      br
+      br
+      h1  List Types 
+      // definition list
+      h1  Definition list 
+      dl
+        dt  Bicycle 
+        dd  Has two wheels 
+      h2  Ordered list 
+      ol
+        li  Item 1 
+        li  Item 2 
+      h2  Unorderd list 
+      ul
+        li  Apples 
+        li  Oranges 
+      h1  Links 
+      // "_blank" open a new tab, "_self" open in current tab
+      | First link:
+      a(href='http://www.google.com/', target='_blank')  a link 
+      h1  Tables 
+      table(summary='This is a table')
+        caption
+          | This is a caption
+        tr
+          th Sat
+          // row header
+          th Sun
+        tr
+          td  ran 
+          td  biked
+        tr
+          th Mon
+          // row header
+          th Tues
+        tr
+          td  ate 
+          td  slept
+      h1  Forms 
+      // post method: information passed through header section of html file
+      // get: information passed through url
+      // action: send to the script
+      form(action='mail2.php', method='POST')
+        b  Enter text to send 
+        input(type='text', name='text_to_send', value='defaultvalue', size='5')
+        p
+          b  Enter a password 
+          input(type='password', name='password')
+        p
+          | radio1
+          input(type='radio', name='radiovalue1', value='1')
+          br
+          | radio2
+          input(type='radio', name='radiovalue2', value='2')
+          br
+        p
+          | checkbox1
+          input(type='checkbox', name='cbvalue1', value='1')
+          br
+          | checkbox2
+          input(type='checkbox', name='cbvalue2', value='2')
+          br
+        p
+          | Select dropdown:
+          select(option='selectinput')
+            option(value='love')  I love 
+            option(value='hate')  I hate 
+        // hidden input used to pass to the cgi function
+        input(type='hidden', name='Submitted', value='True')
+        input(type='Submit', value='Submit button')
+        button(type='button') Normal button (used rarely)
+      br
+      form(action='mail3.php', method='POST')
+      p
+        b  (textarea) Enter a message to send 
+      // size set character limit
+      p
+        textarea(cols='40', rows='10', name='textarea') Default text
+      input(type='Submit', value='Submit button')
+      button(type='button') Normal button (used rarely)
