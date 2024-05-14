@@ -4,11 +4,15 @@
 
 A blockchain network that let schools, colleges and universities add their credentials in the blockchain which could help against fraud papers.
 
-The network was built using [Hyperledger Fabric V2.X.X](https://www.hyperledger.org/use/fabric) and the test were made on **_Linux/Debian 10 Buster_** machine but should work on any given OS.
+The network was built using [Hyperledger Fabric V2.X.X](https://www.hyperledger.org/use/fabric) and the test were made on **_Linux/Debian 10 Buster_**, **_WSL/Debian 10 Buster_** and **_WSL/Ubuntu_** machines but should work on any given OS.
  
-The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and pug template engine as a render for the front-end.
+The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and **pug template** engine as a render for the front-end.
 
 ## Configuration and running
+
+**TL;DR** : _if you are familiar with hyperlegder fabric and have everything needed for it to run set up, move to _**certificate-network/certificate-starter/**_ and [run & execute the network](#commands-execute)_.
+
+
 **BCertificate** is built on top of Hyperledger Linux foundation, thus it's a must to install and configure Hyperledger first.
 
 ### Hyperledger installation and configuration
@@ -29,15 +33,21 @@ Now how so we start our HL network and get our web app running?
 
 First and foremost, download or clone this repo.\
 Repo structure:
-  - **_test-network/add_path_org1.sh_** : 
-  a script that adds *peer cli*, *peer* and *fabric config* related path with org1's environment variables.\
-  Copy this file (_test-network/add_path_org1.sh_) to *fabric-samples/test-network*.
+   - **_certificate-network/_** : contains our full blockchain application. It contains our config files, crypto materials, starter-app, chaincode ... etc.
+  <blockquote>
+  
+  As Hyperledger has changed [fabric_samples](https://github.com/hyperledger/fabric-samples) folder content and structure, _**certificate-network/**_ has the necerssary binaries and tools- to build and run up our netwrork. Its content could also be found in the original [fabric-samples version-2.0.0 repository](https://github.com/hyperledger/fabric-samples/releases/tag/v2.0.0-beta)
+  </blockquote>
+  
+  - **_certificate-network/test-network/add_path_org1.sh_** : 
+  a custom script that adds *peer cli*, *peer* and *fabric config* related path with org1's environment variables.\
+  Copy this file (_test-network/add_path_org1.sh_) to *certficate-network/test-network*.
 
-  - **_chaincode/certificate/_**: contains our smart contract code (**_javascript/_**, **_java/_**) which will be packaged (chaincode), installed and committed to corresponding peers.\
-  Copy the folder **_chaincode/certificate/_** to **_fabric-samples/chaincode_**.\
+  - **_certificate-network/chaincode/certificate/_**: contains our smart contract code (**_javascript/_**, **_java/_**) which will be packaged (chaincode), installed and committed to corresponding peers.\
+  Copy the folder **_chaincode/certificate/_** to **_certficate-network/chaincode_**.\
   Open terminal and run `npm install` to install packages. 
   
-  - **_certificate/_** : contains our client application and is the starting point of our application.
+  - **_certificate-network/certificate-starter/_** : contains our client application and is the starting point of our application.
     * **_startBCertificate.sh_** is the script that is going to start our network, bringing up HL docker images, creating channel, packaging, installing and deploying our chaincode.\
     *Note* : We're deploying our chaincode by nitializing the ledger which consists of requesting and invoking a chaincode initialization function (initLedger).\
     Check the flag **_cci_** in `./network.sh deployCC -ccn certificate -ccv 1 -cci initLedger`\
@@ -50,15 +60,15 @@ Repo structure:
     Run `npm install` before using any scripts. 
 
     * **_java/_** same as *javascript/*, contains our administration scripts.
-    Not fully implemented and neither fully tested.\
+    Not fully implemented and neither fully tested.
 
     * **_apiserver/_** is our nodeJS application. It contains same administration scripts in *javascript/* and more.\
-    Run `npm install` before using any enrolling admin, registering the user and invoking transactions.\
+    Run `npm install` before using any enrolling admin, registering the user and invoking transactions.
     
-    * Copy **_certificate/_** and paste to **_fabric/samples/_** 
+<a name name="#commands-execute">_**Run & Execute Certificate**_</a>
 
 Now that we went through all the folder and script let's see how we to start the app step by step :
-  - Make sure you are in *fabric-samples/certificate* run the following commands on your terminal:
+  - Make sure you are in _**certificate-network/certificate-starter**_ run the following commands on your terminal:
     
     * `./startBCertificate.sh` 
     * `cd apiserver/` 
