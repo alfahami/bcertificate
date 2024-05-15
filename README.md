@@ -9,8 +9,13 @@ The network was built using [Hyperledger Fabric V2.X.X](https://www.hyperledger.
 The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and **pug template** engine as a render for the front-end.
 
 ## Configuration and running
+_**NB:** Having **_docker_** installed in one's OS is a **MUST**_.
 
 **TL;DR** : _if you are familiar with hyperlegder fabric and have everything needed for it to run set up, move to _**certificate-network/certificate-starter/**_ and [run & execute the network](#commands-execute)_.
+
+
+If you have never dealth with Hyperledger Fabric before, then you might want to grab the  version that suits well this project.
+ Download the [sources of fabric-samples version-2.0.0 repository](https://github.com/hyperledger/fabric-samples/releases/tag/v2.0.0-beta) and do the following:
 
 
 **BCertificate** is built on top of Hyperledger Linux foundation, thus it's a must to install and configure Hyperledger first.
@@ -25,6 +30,7 @@ The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and **pu
   - Run this single command to download and install the samples, binaries, and docker image of the latest production release of HL:
 
   - `curl -sSL https://bit.ly/2ysbOFE | bash -s`
+  - if the above link is not working, download the [sources of fabric-samples version-2.0.0 repository](https://github.com/hyperledger/fabric-samples/releases/tag/v2.0.0-beta)
   - Find more details [Official HL documentation](https://hyperledger-fabric.readthedocs.io/en/release-2.2/install.html)
   - Run the test-network as described in [using the test-network tutoriel](https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html) to make sure that everything is set up.
 
@@ -41,10 +47,10 @@ Repo structure:
   
   - **_certificate-network/test-network/add_path_org1.sh_** : 
   a custom script that adds *peer cli*, *peer* and *fabric config* related path with org1's environment variables.\
-  Copy this file (_test-network/add_path_org1.sh_) to *certficate-network/test-network*.
+  Copy this file (_**add_path_org1.sh**_) to **_fabric-samples/test-network_**.
 
   - **_certificate-network/chaincode/certificate/_**: contains our smart contract code (**_javascript/_**, **_java/_**) which will be packaged (chaincode), installed and committed to corresponding peers.\
-  Copy the folder **_chaincode/certificate/_** to **_certficate-network/chaincode_**.\
+  Copy the folder **_certificate-network/chaincode/certificate/_** to **_fabric-samples/chaincode/_**.\
   Open terminal and run `npm install` to install packages. 
   
   - **_certificate-network/certificate-starter/_** : contains our client application and is the starting point of our application.
@@ -64,6 +70,8 @@ Repo structure:
 
     * **_apiserver/_** is our nodeJS application. It contains same administration scripts in *javascript/* and more.\
     Run `npm install` before using any enrolling admin, registering the user and invoking transactions.
+
+    * Copy **_certificate-network/certificate-starter/_** to **_fabric-samples/_**
     
 <a name name="#commands-execute">_**Run & Execute Certificate**_</a>
 
@@ -97,11 +105,13 @@ Git GitHub's certificate\
 
 ![alt text](screenshots/git-github.png "Certificate details")
 
+##### BLOCKCHAIN LAND MANAGEMENT SYSTEM
+If you find interest in this project. You might also look at a similar project that manage land certificates with **QR Code** where a client request a certificate to a land conserver and this latter add it in their [blockchain network land certificate management](https://github.com/alfahami/landCertificate).
+
 #### Contributions, remarks & questions
-Please contact me by email in case you've got questions, remarks, ... regarding the project.\
+Please contact me by email in case you've got questions, remarks, can't launch the app ... regarding the project.\
 Feel free to contribute by creating an [issue](https://github.com/alfahami/bcertificate/issues/new) and/or a [pull request](https://github.com/alfahami/bcertificate/pulls). \
 The main focus was on getting familiar with Hyperledger and its different ways of building blockchain solutions. 
-
 
 ### Author
  [AL-FAHAMI TOIHIR](https://alfahami.github.io/ "Resume and protfolio page")\
