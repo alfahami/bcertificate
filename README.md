@@ -107,7 +107,9 @@ Git GitHub's certificate\
 
 ##### BLOCKCHAIN LAND MANAGEMENT SYSTEM
 If you find interest in this project.<br>
-You might also look at a similar project that manage land certificates with **QR Code** where a client request a certificate to a land conserver and this latter add it in their [blockchain network land certificate management](https://github.com/alfahami/landCertificate).
+You might also look at a similar project that manage land certificates with **QR Code** where a client request a certificate to a land conserver and this latter add it in their [blockchain network land certificate management](https://github.com/alfahami/landcertificate).
+
+<cite>Once again the main idea was to get familiar with how **Hyperledger Fabric** build and handles blockchain rahter than the user application and user experience.</cite>
 
 #### Contributions, remarks & questions
 Please contact me by email in case you've got questions, remarks, can't launch the app ... regarding the project.\
