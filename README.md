@@ -11,11 +11,11 @@ The web app is built with **_NodeJS_**, **_ExpressJS_**, **_REST API_** and **pu
 ## Configuration and running
 _**NB:** Having **_docker_** installed in one's OS is a **MUST**_.
 
-**TL;DR** : _if you are familiar with hyperlegder fabric and have everything needed for it to run set up, move to _**certificate-network/certificate-starter/**_ and [run & execute the network](#commands-execute)_.
+**TL;DR** : _if one's familiar with hyperlegder fabric and have everything needed for it to run set up, move to _**certificate-network/certificate-starter/**_ and [run & execute the network](#commands-execute)_.
 
 
-If you have never dealth with Hyperledger Fabric before, then you might want to grab the  version that suits well this project.
- Download the [sources of fabric-samples version-2.0.0 repository](https://github.com/hyperledger/fabric-samples/releases/tag/v2.0.0-beta) and do the following:
+If you have never dealth with Hyperledger Fabric before, then you might want to grab the  version that suits well this project.<br>
+Download the [sources of fabric-samples version-2.0.0 repository](https://github.com/hyperledger/fabric-samples/releases/tag/v2.0.0-beta) and do the following:
 
 
 **BCertificate** is built on top of Hyperledger Linux foundation, thus it's a must to install and configure Hyperledger first.
@@ -35,14 +35,14 @@ If you have never dealth with Hyperledger Fabric before, then you might want to 
   - Run the test-network as described in [using the test-network tutoriel](https://hyperledger-fabric.readthedocs.io/en/release-2.2/test_network.html) to make sure that everything is set up.
 
 ### BCertificate, installation and running
-Now how so we start our HL network and get our web app running?
+Now how do we start our HL network and get our web app running?
 
 First and foremost, download or clone this repo.\
 Repo structure:
    - **_certificate-network/_** : contains our full blockchain application. It contains our config files, crypto materials, starter-app, chaincode ... etc.
   <blockquote>
   
-  As Hyperledger has changed [fabric_samples](https://github.com/hyperledger/fabric-samples) folder content and structure, _**certificate-network/**_ has the necerssary binaries and tools- to build and run up our netwrork. Its content could also be found in the original [fabric-samples version-2.0.0 repository](https://github.com/hyperledger/fabric-samples/releases/tag/v2.0.0-beta)
+  As Hyperledger has changed [fabric_samples](https://github.com/hyperledger/fabric-samples) folder content and structure, _**certificate-network/**_ has the necerssary binaries and tools to build and run up our netwrork. Its content could also be found in the original [fabric-samples version-2.0.0 repository](https://github.com/hyperledger/fabric-samples/releases/tag/v2.0.0-beta)
   </blockquote>
   
   - **_certificate-network/test-network/add_path_org1.sh_** : 
@@ -62,7 +62,7 @@ Repo structure:
     * **_networkDown.sh_** will bring down our network, thus stopping running docker containers.\
     Note: If you're restarting the netowrk, you'll probably want to manually remove the chaincode docker volumes as they'll create conflict. (`docker volumes prune` would remove all your docker volumes)
 
-    * **_javascript/_** is where we're going to *enroll ou admin*, *registrer our user* (so he/she can run transactions against the network by invoking the chaincode) and *querying the ledger* to get added certificates as we've deployed our chaincode while initializing it.\
+    * **_javascript/_** is where we're going to *enroll ou admin*, *registrer our user* (so one can run transactions against the network by invoking the chaincode) and *querying the ledger* to get added certificates as we've deployed our chaincode while initializing it.\
     Run `npm install` before using any scripts. 
 
     * **_java/_** same as *javascript/*, contains our administration scripts.
