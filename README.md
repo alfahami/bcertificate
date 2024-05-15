@@ -106,7 +106,8 @@ Git GitHub's certificate\
 ![alt text](screenshots/git-github.png "Certificate details")
 
 ##### BLOCKCHAIN LAND MANAGEMENT SYSTEM
-If you find interest in this project. You might also look at a similar project that manage land certificates with **QR Code** where a client request a certificate to a land conserver and this latter add it in their [blockchain network land certificate management](https://github.com/alfahami/landCertificate).
+If you find interest in this project.<br>
+You might also look at a similar project that manage land certificates with **QR Code** where a client request a certificate to a land conserver and this latter add it in their [blockchain network land certificate management](https://github.com/alfahami/landCertificate).
 
 #### Contributions, remarks & questions
 Please contact me by email in case you've got questions, remarks, can't launch the app ... regarding the project.\
