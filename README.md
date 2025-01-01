@@ -14,7 +14,7 @@ _**NB:** Having **_docker_** installed in one's OS is a **MUST**_.
 **TL;DR** : _if one's familiar with hyperlegder fabric and have everything needed for it to run set up, move to _**certificate-network/certificate-starter/**_ and [run & execute the network](#commands-execute)_.
 
 
-If you have never dealth with Hyperledger Fabric before, then you might want to grab the  version that suits well this project.<br>
+If you have never dealt with Hyperledger Fabric before, then you might want to grab the  version that suits well this project.<br>
 Download the [sources of fabric-samples version-2.0.0 repository](https://github.com/hyperledger/fabric-samples/releases/tag/v2.0.0-beta) or grab them from  my [fabric-sample 2021's fork](https://github.com/alfahami/fabric-samples) and do the following:
 
 
