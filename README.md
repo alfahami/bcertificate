@@ -1,5 +1,5 @@
 # Quick intro
-📖 This project is documented in detail on [Codelogium](https://codelogium.github.io/projects/blockchain/bcertificate/) — covering the architecture, how it works, setup instructions, and key learnings.
+📖 This project is documented in detail on <a href="https://example.com" target="_blank">Codelogium</a>, covering the architecture, how it works, setup instructions, and key learnings.
 
 **BCertificate** is a Hyperledger blockchain full application that automates the issuance, dispatch, and management of university's digital credentials (diplomas, skills, transcripts, degree certifications, etc).
 
